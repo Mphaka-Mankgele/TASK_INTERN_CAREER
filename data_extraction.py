@@ -17,6 +17,7 @@ soup = BeautifulSoup(response.content, "html.parser")
 forecast = soup.find("div", class_="HourlyForecast--DisclosureList--MQWP6")
 dates = forecast.find_all("h2", class_="HourlyForecast--longDate--J_Pdh")
 
+
 #print(forecast.prettify())
 for date in dates:
     print(date.text)
